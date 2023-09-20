@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 
 <?php 
-  if(!isset($_SESSION)) {
-    session_start();
+  if(isset($_COOKIE)) {
+    header('Location: '.'./page1.php');
   }
-
 ?>
   
 <html lang="en">
