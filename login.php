@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 
 <?php 
+  session_start();
+
   if(isset($_COOKIE)) {
-    header('Location: '.'./page1.php');
+    header('Location: '.'/Homepage.php');
+    return;
   }
 ?>
   
@@ -44,7 +47,6 @@
 
      if($_POST["email"] == 'Rmramos@gmail.com' and $_POST["password"] == '12345')
      {    
-        session_start();
         $_SESSION["email"] = $_POST["email"]; 
         setcookie("login_token", "1", time() + 3600, '/');
         header("Location: ".$page1 );
