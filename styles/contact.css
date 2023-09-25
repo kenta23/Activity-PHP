@@ -1,0 +1,58 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+.main-contact {
+    width: 60%;
+    margin: 150px auto;  
+}
+.row  {
+    width: 100%;
+    margin: 40px 0;
+    padding: 10px 5px;
+    
+}
+.contact-text {
+    text-align: center;
+}
+.submitBtn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #ffff;
+    background-color: rgb(106, 44, 134);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.submitBtn:hover {
+    background-color: rgb(129, 70, 156);
+}
+.socials {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+.socials a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 300ms ease;
+}
+.socials a img:hover {
+    transform: scale(1.05);
+}
+h3 {
+    text-align: center;
+}
+

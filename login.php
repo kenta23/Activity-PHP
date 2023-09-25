@@ -76,10 +76,9 @@
   }
 
    form.addEventListener('submit', (e) => {
-     e.preventDefault();
 
-     if(emailInput.value !== 'Rmramos@gmail.com' || passwordInput.value !== '12345') {
-      
+     if(emailInput.value !== 'Rmramos@gmail.com' || passwordInput.value !== '12345') {   
+      e.preventDefault(); 
       showStatus();  //call the function to show status 
 
       setTimeout(() => {
@@ -87,6 +86,8 @@
          statusShowUp.classList.add('invisible');
          statusShowUp.classList.remove('visible');  //after 4s stop displaying the status
         }, 2000);
+
+        return;
      }
    })
 </script>

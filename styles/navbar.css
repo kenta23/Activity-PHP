@@ -11,13 +11,18 @@
     align-items: center;   
     flex-direction: row;
     height: 70px;
-    background: #b39dc0;
+    padding-top: 10px;
+    background-color: #382344;
+    z-index: 2;
+    width: 100%;
 }
 .text-logo {
-    font-size: 2.5rem;
-    color: #321f3a;
+    font-size: 1.3rem;
+    color: #ffff;
     letter-spacing: 10px;
     text-shadow: 3px 5px 18px #3b2846;
+    text-transform: uppercase;
+    font-weight: 200;
 }
 .main {
     width: 100%;
@@ -29,9 +34,6 @@
     align-items: center;
     width: 100%;
 }
-.navbar-brand {
-     
-}
 ul {
     display: flex;
     list-style: none;
@@ -40,12 +42,12 @@ ul {
     align-items: center;
 }
 ul > li {
-    font-size: 1.5rem;  
+    font-size: 1.4rem;  
     position: relative;
 }
 
 ul > li > a {
-    color: #402350;
+    color: #ffff;
     text-decoration: none;   
     transition: all 300ms ease-in-out;
 }
