@@ -48,7 +48,7 @@
    if(isset($_POST["email"]) && $_POST["password"]) {
      $page1 = './Homepage.php';
 
-     if($_POST["email"] == 'Rmramos@gmail.com' && $_POST["password"] == '12345')
+     if($_POST["email"] == 'admin' && $_POST["password"] == '12345')
      {    
         $_SESSION["email"] = $_POST["email"]; 
         setcookie("login_token", $_SESSION['email'], time() + 3600, '/');
@@ -77,7 +77,7 @@
 
    form.addEventListener('submit', (e) => {
 
-     if(emailInput.value !== 'Rmramos@gmail.com' || passwordInput.value !== '12345') {   
+     if(emailInput.value !== 'admin' || passwordInput.value !== '12345') {   
       e.preventDefault(); 
       showStatus();  //call the function to show status 
 
