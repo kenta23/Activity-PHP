@@ -3,9 +3,24 @@
 <?php 
   session_start();
 
-  if(!isset($_COOKIE)) {
-    header('Location: '.'/login.php');
-    return;
+  if (!isset($_COOKIE['login_token'])) {
+    header('Location: /login.php');
+    exit; 
+  }
+
+  if (isset($_POST['logout'])) {
+    // Clear session variables
+    $_SESSION = array();
+
+    // Expire the "login_token" cookie by setting it to the past
+    setcookie('login_token', '', time() - 3600, '/');
+
+    // Destroy the session
+    session_destroy();
+
+    // Redirect to the login page
+    header('Location: /login.php');
+    exit;
   }
  
 ?>
@@ -28,11 +43,19 @@
             <li><a href="/Projects.php">Projects</a></li>
             <li><a href="/About.php">About</a></li>
             <li><a href="/Contact.php">Contact</a></li>
-            <button class="logout" type="button">Logout</button>
+
+            <form method="post">
+               <button class="logout" type="submit" name="logout">Logout</button>
+            </form> 
           </ul> 
-      </div>
+    </div>
     </nav>
   </div>
+
+
+  <?php 
+     
+  ?>
     
 
 </body>

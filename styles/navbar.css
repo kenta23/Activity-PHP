@@ -20,7 +20,8 @@
     text-shadow: 3px 5px 18px #3b2846;
 }
 .main {
-    
+    width: 100%;
+    min-width: 800px;
 }
 .nav-div {
     display: flex;
