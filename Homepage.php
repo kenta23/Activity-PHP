@@ -92,7 +92,7 @@
 
     <script>
        const text = document.querySelector('.typing-text');
-       const contentText = "Enjoy exploring my page";
+       const contentText = "Feel free to explore";
 
        let index = 0
 
